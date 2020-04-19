@@ -45,6 +45,14 @@ func conditionsLesson() {
 	}
 	conditions.OddEvenCallback(1, oddCallback, evenCallback)
 	conditions.OddEvenCallback(2, oddCallback, evenCallback)
+
+	fmt.Printf("Number as string %s", conditions.GetNumberAsString(1))
+	fmt.Println()
+	fmt.Printf("True: What am I %s", conditions.WhatAmI(true))
+	fmt.Println()
+	fmt.Printf("1: What am I %s", conditions.WhatAmI(1))
+	fmt.Println()
+	fmt.Printf("\"value\": What am I %s", conditions.WhatAmI("value"))
 	fmt.Println()
 }
 
