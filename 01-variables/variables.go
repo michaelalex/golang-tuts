@@ -9,7 +9,8 @@ func GetCoupleOfNumbers() (int, int) {
 	return b, c
 }
 
+const value string = "Hello World"
+
 func GetHelloWorld() string {
-	value := "Hello World"
 	return value
 }
