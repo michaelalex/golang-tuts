@@ -6,6 +6,7 @@ import (
 	loops "golang-tuts/golang-tuts/02-loops"
 	functions "golang-tuts/golang-tuts/03-functions"
 	conditions "golang-tuts/golang-tuts/04-conditions"
+	pointers "golang-tuts/golang-tuts/06-pointers"
 )
 
 func variablesLesson() {
@@ -56,9 +57,24 @@ func conditionsLesson() {
 	fmt.Println()
 }
 
+func pointersLesson() {
+	fmt.Println()
+	fmt.Println("=== 06 - POINTERS ===")
+
+	value := 0
+	pointers.UpdateValue(&value, 10)
+	fmt.Println("Value with pointer: ", value)
+
+	pointers.UpdateValueWithoutPointer(value, 100)
+	fmt.Println("Value without pointer: ", value)
+
+	fmt.Println()
+}
+
 func main() {
 	variablesLesson()
 	loopsLesson()
 	functionsLesson()
 	conditionsLesson()
+	pointersLesson()
 }
