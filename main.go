@@ -7,6 +7,8 @@ import (
 	functions "golang-tuts/golang-tuts/03-functions"
 	conditions "golang-tuts/golang-tuts/04-conditions"
 	pointers "golang-tuts/golang-tuts/06-pointers"
+	structs "golang-tuts/golang-tuts/07-structs"
+	katas "golang-tuts/golang-tuts/katas"
 )
 
 func variablesLesson() {
@@ -57,6 +59,15 @@ func conditionsLesson() {
 	fmt.Println()
 }
 
+func katasLesson() {
+	fmt.Println()
+	fmt.Println("=== 05 - KATAS ===")
+
+	arr := []int{2, 4, 6, 8, -3}
+	fmt.Println(katas.FindOutlier(arr))
+	fmt.Println()
+}
+
 func pointersLesson() {
 	fmt.Println()
 	fmt.Println("=== 06 - POINTERS ===")
@@ -71,10 +82,26 @@ func pointersLesson() {
 	fmt.Println()
 }
 
+func newPerson(id int, firstname string, surname string) *structs.Person {
+	person := structs.Person{Id: id, Firstname: firstname, Surname: surname}
+	return &person
+}
+
+func structsLesson() {
+	fmt.Println()
+	fmt.Println("=== 07 - STRUCTS ===")
+
+	person := newPerson(1, "John", "Doe")
+	fmt.Printf("Person id: %d firstname: %s surname: %s", person.Id, person.Firstname, person.Surname)
+	fmt.Println()
+}
+
 func main() {
 	variablesLesson()
 	loopsLesson()
 	functionsLesson()
 	conditionsLesson()
 	pointersLesson()
+	katasLesson()
+	structsLesson()
 }
